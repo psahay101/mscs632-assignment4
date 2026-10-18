@@ -1,0 +1,44 @@
+WEEKLY SHIFT SCHEDULE (12 employees, random seed 632)
+Rules: one shift per day, at most 5 days each, 2-3 employees per shift
+
+Day       | Morning            | Afternoon          | Evening
+----------+--------------------+--------------------+--------------------
+Monday    | Alice, Bruno, Chen | Dana+, Eli+, Farah | Gus, Hana+, Jade
+Tuesday   | Ivan, Alice, Dana  | Kofi, Bruno, Farah | Lena, Eli, Hana
+Wednesday | Gus, Ivan, Alice   | Jade, Bruno, Hana  | Chen, Lena, Eli
+Thursday  | Kofi, Dana, Gus    | Farah, Jade, Bruno | Chen, Ivan
+Friday    | Lena, Alice, Dana  | Kofi, Farah, Hana  | Chen, Eli, Gus
+Saturday  | Ivan+, Kofi, Dana  | Bruno+, Jade, Eli  | Chen, Gus, Hana+
+Sunday    | Farah, Ivan        | Kofi, Alice*       | Lena, Jade*
+  + placed after a conflict    * added at random to reach the 2-person minimum
+
+Employee  Mon  Tue  Wed  Thu  Fri  Sat  Sun  Days  1st choice
+Alice     M    M    M    -    M    -    A*   5     4/4
+Bruno     M    A    A    A    -    A+   -    5     4/5
+Chen      M    -    E    E    E    E    -    5     5/5
+Dana      A+   M    -    M    M    M    -    5     4/5
+Eli       A+   E    E    -    E    A    -    5     4/6
+Farah     A    A    -    A    A    -    M    5     5/5
+Gus       E    -    M    M    E    E    -    5     5/6
+Hana      E+   E    A    -    A    E+   -    5     3/5
+Ivan      -    M    M    E    -    M+   M    5     4/5
+Jade      E    -    A    A    -    A    E*   5     4/4
+Kofi      -    A    -    M    A    M    A    5     5/5
+Lena      -    E    E    -    M    -    E    4     4/4
+59 shifts filled: 51 first choices, 6 placed after conflicts, 2 added at random
+
+CONFLICTS AND ADJUSTMENTS
+Monday    Morning is full: Dana placed in Afternoon (2nd choice)
+Monday    Morning is full: Eli moved to Afternoon
+Monday    Afternoon is full: Hana placed in Evening (2nd choice)
+Friday    all shifts are full: Ivan carried over to Saturday
+Friday    all shifts are full: Bruno carried over to Saturday
+Saturday  Ivan carried over from Friday: placed in Morning
+Saturday  Bruno carried over from Friday: placed in Afternoon
+Saturday  Morning is full: Hana moved to Evening
+Sunday    Eli asked for Sunday but has already worked 5 days
+Sunday    Gus asked for Sunday but has already worked 5 days
+Sunday    Afternoon below minimum: Alice added at random
+Sunday    Evening below minimum: Jade added at random
+
+RULE CHECK: PASS (no double shifts, nobody over 5 days, 2-3 employees on every shift)

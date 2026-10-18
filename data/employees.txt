@@ -1,0 +1,18 @@
+# Weekly shift preferences, one employee per line.
+# Each day column lists that day's shifts best first: M = morning,
+# A = afternoon, E = evening (so "M A" means morning, else afternoon).
+# "-" means the employee would like that day off.
+#
+# Name  | Mon | Tue | Wed | Thu | Fri   | Sat | Sun
+Alice   | M A | M A | M   | -   | M     | -   | -
+Bruno   | M   | A M | A   | A   | A     | -   | -
+Chen    | M E | -   | E   | E   | E A   | E   | -
+Dana    | M A | M   | -   | M   | M     | M   | -
+Eli     | M   | E   | E A | -   | E     | A   | A
+Farah   | A   | A   | -   | A M | A     | -   | M
+Gus     | E   | -   | M   | M   | E     | E   | E
+Hana    | A E | E   | A   | -   | A     | M   | -
+Ivan    | -   | M   | M E | E   | M     | -   | M
+Jade    | E   | -   | A   | A   | -     | A   | -
+Kofi    | -   | A   | -   | M   | A M   | M   | A
+Lena    | -   | E   | E   | -   | M A E | -   | E

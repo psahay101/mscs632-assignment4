@@ -1,0 +1,1 @@
+1000 random teams (687 large enough to staff every shift), 0 failures; Python and Rust outputs identical in every trial
